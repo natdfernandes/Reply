@@ -31,6 +31,18 @@ fun ReplyApp(
     val viewModel: ReplyViewModel = viewModel()
     val replyUiState = viewModel.uiState.collectAsState().value
 
+    when (windowSize) {
+        WindowWidthSizeClass.Compact -> {
+        }
+        WindowWidthSizeClass.Medium -> {
+        }
+        WindowWidthSizeClass.Expanded -> {
+        }
+        else -> {
+        }
+    }
+
+
     ReplyHomeScreen(
         replyUiState = replyUiState,
         onTabPressed = { mailboxType: MailboxType ->
