@@ -32,16 +32,6 @@ fun ReplyApp(
     val viewModel: ReplyViewModel = viewModel()
     val replyUiState = viewModel.uiState.collectAsState().value
 
-    when (windowSize) {
-        WindowWidthSizeClass.Compact -> {
-        }
-        WindowWidthSizeClass.Medium -> {
-        }
-        WindowWidthSizeClass.Expanded -> {
-        }
-        else -> {
-        }
-    }
     val navigationType: ReplyNavigationType
     when (windowSize) {
         WindowWidthSizeClass.Compact -> {
