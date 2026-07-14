@@ -115,25 +115,23 @@ fun ReplyHomeScreen(
                 modifier = modifier
             )
         }
-
-    }
-
-    if (replyUiState.isShowingHomepage) {
-        ReplyAppContent(
-            replyUiState = replyUiState,
-            onTabPressed = onTabPressed,
-            onEmailCardPressed = onEmailCardPressed,
-            navigationItemContentList = navigationItemContentList,
-            modifier = modifier
-        )
     } else {
-        ReplyDetailsScreen(
-            replyUiState = replyUiState,
-            onBackPressed = onDetailScreenBackPressed,
-            modifier = modifier
-        )
+        if (replyUiState.isShowingHomepage) {
+            ReplyAppContent(
+                replyUiState = replyUiState,
+                onTabPressed = onTabPressed,
+                onEmailCardPressed = onEmailCardPressed,
+                navigationItemContentList = navigationItemContentList,
+                modifier = modifier
+            )
+        } else {
+            ReplyDetailsScreen(
+                replyUiState = replyUiState,
+                onBackPressed = onDetailScreenBackPressed,
+                modifier = modifier
+            )
+        }
     }
-
 }
 
 @Composable
